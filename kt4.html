@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="value-display" id="value">50</div>
+    <input type = "range" min ="0" max="100" step="1" value="50" id="slider">
+<script>
+  const slider = document.getElementById('slider');
+  const valueDisplay = document.getElementById('value');
+
+  // обновляем значение сразу при загрузке
+  valueDisplay.textContent = slider.value;
+
+  // обновляем при каждом движении ползунка
+  slider.addEventListener('input', () => {
+    valueDisplay.textContent = slider.value;
+  });
+</script>
+</body>
+</html>
