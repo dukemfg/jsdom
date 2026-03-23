@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body { margin: 30px; }
+    ul { list-style: none; padding-left: 20px; margin: 0; }
+    li { margin: 4px 0; }
+
+    .item {
+      background: #e74c3c;
+      color: white;
+      padding: 10px;
+    }
+
+    .item.has-child.open { background: #c0392b; }
+    .item span { margin-right: 8px; }
+
+    .submenu {
+      max-height: 0;
+      overflow: hidden;
+    }
+    .submenu.open { max-height: 400px; }
+  </style>
+</head>
+<body>
+
+<h2>Каталог товаров</h2>
+
+<ul>
+  <li>
+    <div class="item has-child" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open')">
+      <span>→</span> Книги
+    </div>
+    <ul class="submenu">
+      <li>
+        <div class="item has-child" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open')">
+          Отечественные
+        </div>
+        <ul class="submenu">
+          <li><div class="item">Детективы</div></li>
+        </ul>
+      </li>
+      <li>
+        <div class="item has-child" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open')">
+          Зарубежные
+        </div>
+        <ul class="submenu">
+          <li><div class="item">Проза</div></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <div class="item has-child" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open')">
+      <span>→</span> DVD
+    </div>
+    <ul class="submenu">
+      <li>
+        <div class="item has-child" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open')">
+          Отечественные
+        </div>
+        <ul class="submenu">
+          <li><div class="item">Комедии</div></li>
+        </ul>
+      </li>
+      <li><div class="item">Зарубежные</div></li>
+    </ul>
+  </li>
+</ul>
+
+</body>
+</html>
